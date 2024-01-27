@@ -57,16 +57,20 @@ const {data:session} = useSession();
                     </div>
                 ) : (
                     <div>
-{ providers && 
-Object.values(providers).map((provider)=>{
-<button type="button"
-key={provider.name} onClick={()=>signIn(provider.id)}
-className='black_btn'>
-    Sign In
-
-
-</button>
-})}
+{providers && (
+  <div>
+    {Object.values(providers).map((provider) => (
+      <button
+        type="button"
+        key={provider.name}
+        onClick={() => signIn(provider.id)}
+        className="black_btn"
+      >
+        Sign In
+      </button>
+    ))}
+  </div>
+)}
                     </div>
                 )}
             </div>
@@ -100,16 +104,21 @@ onClick={()=>{
 
 </div>) : 
             (<div>
-{providers && 
-Object.values(providers).map((provider)=>{
-<button type="button"
-key={provider.name} onClick={()=>signIn(provider.id)}
-className='black_btn'>
-    Sign In
-
-
-</button>
-})}
+                
+{providers && (
+  <div>
+    {Object.values(providers).map((provider) => (
+      <button
+        type="button"
+        key={provider.name}
+        onClick={() => signIn(provider.id)}
+        className="black_btn"
+      >
+        Sign In
+      </button>
+    ))}
+  </div>
+)}
             </div>)} 
 
             </div>
